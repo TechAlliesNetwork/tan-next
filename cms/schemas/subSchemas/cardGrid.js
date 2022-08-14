@@ -115,5 +115,12 @@ export default {
       type: "number",
       validation: (Rule) => Rule.required().integer().min(1),
     },
+    {
+      title: "Card Body Spacing",
+      name: "cardBodySpacing",
+      type: "number",
+      initialValue: 1,
+      validation: (Rule) => Rule.required().integer().min(0).max(1),
+    }
   ],
 };

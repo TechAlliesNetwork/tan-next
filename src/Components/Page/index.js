@@ -16,7 +16,8 @@ const Page = () => {
   const router = useRouter()
   const [pageContent, setPageContent] = useState(0);
   useEffect(() => {
-    if (router.query.page){
+    console.log(router)
+    if (router.asPath){
       sanityClient
         .fetch(
           `

@@ -9,7 +9,7 @@ export const Card = styled.div`
   word-break: keep-all;
   .card-contents {
     padding: 1rem 2rem;
-    flex-grow: 1;
+    flex-grow: ${(props) => props.cardBodySpacing};
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -4,9 +4,9 @@ import { Headers } from "../styles";
 import Button from "../Button";
 import * as S from "./Card.style";
 
-function Card({ image, title, titleVisability, children, ctas, bgColor }) {
+function Card({ image, title, titleVisability, children, ctas, bgColor, cardBodySpacing }) {
   return (
-    <S.Card background-color={bgColor}>
+    <S.Card background-color={bgColor} cardBodySpacing={cardBodySpacing}>
       {image && <S.Image src={image.url} alt={image.alt} />}
       <div className="card-contents">
         {titleVisability && <Headers.H2>{title}</Headers.H2>}
@@ -58,6 +58,7 @@ Card.propTypes = {
     })
   ),
   bgColor: PropTypes.string,
+  cardBodySpacing: PropTypes.number
 };
 
 Card.defaultProps = {
@@ -67,4 +68,5 @@ Card.defaultProps = {
   ctas: null,
   image: { url: null, alt: null, style: null },
   bgColor: null,
+  cardBodySpacing: 1,
 };

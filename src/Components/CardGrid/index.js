@@ -15,6 +15,7 @@ function Cards({ id }) {
           title,
           titleVisability,
           columns,
+          cardBodySpacing,
           "cards":cards[]{
             image,
             title,
@@ -42,7 +43,7 @@ function Cards({ id }) {
           content?.cards.map((card) => (
             <Card
               key={card?._key}
-              image={{
+              image={card?.image && {
                 url: urlFor(card?.image)?.url(),
                 alt: card?.image?.alt,
               }}
@@ -50,6 +51,7 @@ function Cards({ id }) {
               titleVisability={card?.titleVisability}
               ctas={card?.ctas}
               bgColor={card?.color?.hexCode}
+              cardBodySpacing={content?.cardBodySpacing}
             >
               <BlockContent blocks={card?.text} />
             </Card>
