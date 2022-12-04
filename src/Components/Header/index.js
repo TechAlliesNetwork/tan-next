@@ -15,11 +15,13 @@ function Header(props) {
         <S.Header>
           <div className="logo-container">
             <Link href="/">
-              <img
-                src={`/images/TAN_logo.png`}
-                alt={appName + " logo"}
-                className="logo"
-              />
+              <picture>
+                <img
+                  src="/images/TAN_logo.png"
+                  alt={appName + " logo"}
+                  className="logo"
+                />
+              </picture>
             </Link>
             <span className="name">{appName}</span>
           </div>

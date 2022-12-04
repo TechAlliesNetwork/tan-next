@@ -32,7 +32,7 @@ const Page = () => {
           setPageContent(data.length === 0 ? { error: 404 } : data[0]);
         });
     }
-  }, [router.asPath]);
+  }, [router, router.asPath]);
   
   return (
     <div id="top" className="App">

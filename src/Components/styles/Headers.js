@@ -21,8 +21,10 @@ const H3 = styled.h3`
   text-align: center;
 `;
 
-export default {
+const headers = {
   H1,
   H2,
   H3,
 };
+
+export default headers;

@@ -8,7 +8,7 @@ const size = {
   desktop: "2560px",
 };
 
-export default {
+const screens = {
   mobileS: `screen and (min-width: ${size.mobileS})`,
   mobileM: `screen and (min-width: ${size.mobileM})`,
   mobileL: `screen and (min-width: ${size.mobileL})`,
@@ -27,3 +27,5 @@ export default {
   maxDesktop: `screen and (max-width: ${size.desktop})`,
   maxDesktopL: `screen and (max-width: ${size.desktop})`,
 };
+
+export default screens;
